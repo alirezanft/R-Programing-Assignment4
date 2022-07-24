@@ -1,20 +1,7 @@
 best <- function(state, outcome){
-        # complete csv file to search
-        outcomedata <- read.csv("outcome-of-care-measures.csv")
-        
-        if(!any(state == outcomedata$State)){
-                stop("invalid state")}
-        else if((outcome %in% c("heart attack", "heart failure",
-                                "pneumonia")) == FALSE) {
-                stop(print("invalid outcome"))
-        }
-        
-        # split the csv file based on States
-        splitfile <- split(outcomedata, outcomedata$State)
-        
-        # select the State given by user
-        data <- splitfile[[state]]
-        
+        # This function gets the separated data based on a given state.
+        data <- statedata(state, outcome)
+
         # This function gets the outcome column number. 
         outcome <- colnum(outcome)
         
