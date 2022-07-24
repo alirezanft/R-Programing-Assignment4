@@ -1,6 +1,6 @@
 colnum <- function(outcome){
-        if (outcome == "heart attack") outcome = 11
-        if (outcome == "heart failure") outcome = 17
-        if (outcome == "pneumonia") outcome = 23
-        return(outcome)
+        if (outcome == "heart attack") colnum = 11
+        if (outcome == "heart failure") colnum = 17
+        if (outcome == "pneumonia") colnum = 23
+        return(colnum)
 }
